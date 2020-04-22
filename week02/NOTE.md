@@ -169,18 +169,18 @@
       - any Unicode code point
   - InputElement
     - WhiteSpace   空白符
-      - <TAB> 制表符
-      - <VT>  纵向制表符 \v
-      - <FF>  
-      - <SP> 普通空格
-      - <NBSP> 分词空格
-      - <ZWNBSP> 零宽空格
-      - <USP> unicode 支持的空格
+      - TAB 制表符
+      - VT  纵向制表符 \v
+      - FF  
+      - SP 普通空格
+      - NBSP 分词空格
+      - ZWNBSP 零宽空格
+      - USP unicode 支持的空格
     - LineTerminator  换行符
-      - <LF>
-      - <CR>
-      - <LS>
-      - <PS>
+      - LF
+      - CR
+      - LS
+      - PS
     - Comment   注释
       - // 单行注释
       - /**/ 多行注释
@@ -248,6 +248,15 @@
   const reg = /[-]{0,1}((0[b,B]{1}[0,1]+)|(0[o,O]{1}[0-7]+)|(0[x,X]{1}[0-9a-fA-F]+)|([0-9]+\.[0-9]+)|([0-9]+[e,E]{1}[0-9]+)|([0-9]+))/
   ```
 - UTF-8 Encoding
+  ```JavaScript
+    function utf8Encoding(str) {
+     let result = ''
+     for (let s of str) {
+          result += `\\u${s.charCodeAt().toString(16)}`
+     }
+     return result
+    }
+  ```
   
 - 匹配所有的字符串直接量，单引号和双引号
   ```JavaScript
