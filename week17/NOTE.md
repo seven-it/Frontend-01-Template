@@ -41,9 +41,3 @@ f(100);
 对于基础的命令行的控制，node本身就提供了这样的能力，使用 ttys，目前自己使用的 itrem2 的主题也是使用ttys来实现的。
 
 ---
-
-作业链接：
-
-yeoman：代码详见 `yeoman.js` 文件，具体项目请看 https://github.com/JaykeyGuo/generator-yeoman
-
-console: 代码详见 `console.js` 文件
